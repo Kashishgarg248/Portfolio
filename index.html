@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashish Garg-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(38, 38, 89);
+            padding: 10px 20px;
+        }
+
+        nav h2 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            color: rgb(177, 177, 236);
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 20px auto;
+            width: 90%;
+        }
+
+        .firstSection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+       
+        body {
+            background-color: rgb(0, 0, 33);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            background-color: rgb(38, 38, 89);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(177, 177, 236);
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 23px 0;
+            margin: 148px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+            margin: 90px 0;
+        }
+
+        .polaroid-frame {
+            width: 200px;
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+            margin: 60px 0;
+
+        }
+
+        .polaroid-frame::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            transform: rotate(-3deg);
+        }
+
+        .polaroid-frame img {
+            width: 100%;
+            height: 150%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        .purple {
+            color: rgb(234, 228, 75);
+        }
+
+        #element {
+            color: rgb(234, 228, 75);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+            text-align: center;
+        }
+
+        .secondSection .box {
+            background: rgb(241, 240, 227);
+            width: 80vw;
+            margin: 56px auto;
+
+            padding: 20px;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .secondSection .vertical {
+            height: 20px;
+            width: 1px;
+            background-color: #333;
+
+            display: inline-block;
+
+            margin-right: 20px;
+
+        }
+
+        .secondSection .align-items {
+            display: inline-block;
+
+            vertical-align: top;
+
+            width: calc(100% - 21px);
+
+
+        }
+
+        .secondSection .align-items p {
+            font-size: 20px;
+            line-height: 1.6;
+
+            color: #333;
+
+        }
+
+
+
+        #certifications .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #certifications h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        #certifications .certification-item {
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: white;
+        }
+
+        #certifications .certification-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        #certifications .certification-item p {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        #certifications .certification-item p:last-child {
+            margin-bottom: 0;
+            color: #333;
+        }
+
+        #projects .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #projects h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .project-info p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        #contact .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input,
+        form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        .container {
+            width: 100;
+            padding: 35px 10%;
+        }
+
+        .col header.title {
+            font-family: helvetica;
+            color: white;
+            text-align: center;
+
+            padding: 0px 0px 20px 30px;
+        }
+
+        .col .contents {
+            padding: 0px 30px;
+            border-left: 2px solid #bababa;
+        }
+
+        .col .contents .box {
+            position: relative;
+            padding: 20px;
+            border: 1px solid #eaeaea;
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: all 0.4s;
+            margin-bottom: 20px;
+        }
+
+        .col .contents .box:hover {
+            box-shadow: 0px 3px 12px 0px #ccc;
+            border: 1px solid transparent;
+        }
+
+        .col .contents .box::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            right: calc(100% + 22px);
+            top: 0;
+            background-color: #11a372;
+            border: 2px solid white;
+
+        }
+
+        .box h4 {
+            position: relative;
+            color: #11a372;
+        }
+
+        .box h3 {
+            font-size: 19px;
+            padding: 10px 0px 6px;
+            font-family: helvetica;
+            color: #444;
+        }
+
+        .box p {
+            line-height: 1.2;
+            color: #666;
+            font-size: 17px;
+        }
+
+        .container h2 {
+            font-size: 2.5em;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .skill-level {
+            background-color: #ddd;
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .skill-level-bar {
+            height: 100%;
+            border-radius: 6px;
+            background-color: #4CAF50;
+            width: 80%;
+            transition: width 0.5s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h2>
+                <div class="left"> Kashish Garg Portfolio</div>
+            </h2>
+            <div class="right">
+                <ul>
+                    <li><a href="home">HOME</a> </li>
+                    <li><a href="about">ABOUT </a></li>
+                    <li><a href="certifications">CERTIFICATIONS</a> </li>
+                    <li><a href="projects">PROJECTS </a></li>
+                    <li><a href="contact me">CONTACT ME</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">Hii! My Name is <span class="purple">Kashish Garg</span>
+                and I am a passionate
+                <span id="element"></span>
+            </div>
+            <div class="polaroid-frame">
+                <img src="final.jpg" alt="KG Image">
+            </div>
+
+
+
+        </section>
+        <hr>
+        <section class="secondSection">
+            <h1>ABOUT</h1>
+            <div class="box">
+                <div class="vertical"></div>
+                <div class="align-items">
+                    <p>
+                        Hii! I am Kashish Garg. I am a tech enthusiast and researcher at heart, driven by a fascination
+                        with how technology can transform our world. My journey is marked by a passion for innovation
+                        and a dedication to staying at the forefront of emerging trends. I thrive in dynamic
+                        environments where I can collaborate with like-minded professionals to bring ideas to life.
+                        Let's connect and explore how we can innovate together in the ever-evolving landscape of
+                        technology.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <section class="col">
+                <header class="title">
+                    <h2>EDUCATION</h2>
+                </header>
+                <div class="contents">
+                    <div class="box">
+                        <h4> 2023-2027 </h4>
+                        <h3> Undergraduate </h3>
+                        <p>
+                            I an pursuing B.Tech with CSE branch from KIET Group of Institutions.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <h4> 2022-2023 </h4>
+                        <h3> Intermediate </h3>
+                        <p>
+                            I completed my 12th from Krishna Vidya Niketan Senior Secondary School in PCM with 96.33%
+                            Marks.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <h4> 2020-2021 </h4>
+                        <h3> High School </h3>
+                        <p>
+                            I completed my 10th from Krishna Vidya Niketan Senior Secondary School with 97.33% Marks.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <section id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+
+                <div class="skills-list">
+                    <div class="skill">
+                        <h3>Web Development</h3>
+                        <div class="skill-level">
+                            <div class="skill-level-bar" style="width: 70%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <h3> C & C++ Language </h3>
+                        <div class="skill-level">
+                            <div class="skill-level-bar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <h3>Project Management</h3>
+                        <div class="skill-level">
+                            <div class="skill-level-bar" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>Basics of Python Language</h3>
+                        <div class="skill-level">
+                            <div class="skill-level-bar" style="width: 50%;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="certifications" class="section">
+            <div class="container">
+                <h2>Certifications</h2>
+                <div class="certification-item">
+                    <h3>Internship Completion Certificate</h3>
+                    <p>Issued by MLSA KIET<br><b>Date Earned:</b> November 2024</p>
+                    <p>An opportunity to enhance my Web Development Skills.</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Internship Welcome Letter</h3>
+                    <p>Issued by Bharat Intern<br><b>Date Earned:</b> June 2024</p>
+                    <p>An opportunity for growth and development.</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Business Development Specialist Internship</h3>
+                    <p>Issued by Younity<br><b>Date Earned:</b> April 2024</p>
+                    <p>Certification covering Business Specialist Training.</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Certificate of Training</h3>
+                    <p>Issued by Secure Claw<br><b>Date Earned:</b> June 2024</p>
+                    <p>A certification covering training on "Cybersecurity Essentials for Professionals".</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Certificate of Completion</h3>
+                    <p>Issued by Codechef<br><b>Date Earned:</b> February 2024</p>
+                    <p>A certification showcasing my hardwork and dedication.</p>
+                </div>
+                <div class="certification-item">
+                    <h3>Contributor Card</h3>
+                    <p>Issued by Girlscript Summer of Code<br><b>Date Earned:</b> May 2024</p>
+                    <p>An opportunity to contribute to open source Projects .</p>
+                </div>
+                <div class="certification-item">
+                    <h3>ISP Welcome Letter</h3>
+                    <p>Issued by Internshala<br><b>Date Earned:</b> June 2024</p>
+                    <p>An opportunity to work as a freelancer for Intershala Student Partner.</p>
+                </div>
+
+
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <img src="Screenshot (149).png" alt="Project 1">
+                        <div class="project-info">
+                            <h3>Project 1</h3>
+                            <p>Amazon Clone Project showing HTML,CSS and JavaScript Skills.</p>
+
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="Screenshot (148).png" alt="Project 2">
+                        <div class="project-info">
+                            <h3>Project 2</h3>
+                            <p>Weather Forecast Project showing HTML,CSS and JavaScript Skills.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <form action="mailto:youremail@example.com" method="POST" enctype="multipart/form-data">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>Business</i> Analyst.', ' Web Developer.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
